@@ -1,13 +1,42 @@
-<!DOCTYPE html>  
-<html lang="pl-PL">  
-<HTML> 
-<HEAD> 
-<meta charset="utf-8">   
-<TITLE>Osadzanie pliku JS-Ostrowska</TITLE> 
-</HEAD> 
-<BODY>
-  <a href="z1_ostr.html">Zadanie 1</a> <br><br>
-  <a href="z2_ostr.html">Zadanie 2</a> <br><br>
-  <a href="z3_ostr.html">Zadanie 3</a> <br><br>
-</BODY> 
-</HTML> 
+<html> 
+     <head> 
+            <title> Ostrowska 3F </title>
+         <script language="JavaScript">
+              function WinOpen_z1()  
+               { 
+window.open("z1_ostr.html","okienko_z1_ostr","toolbar=no,directories=no,menubar=no,height=600,width=1000,top=200,left=400"); 
+               } 
+              function WinOpen_z2()  
+               { 
+window.open("z2_ostr.html","okienko_z2_ostr","toolbar=no,directories=no,menubar=no,height=600,width=1000,top=200,left=400"); 
+               } 
+             function WinOpen_z3()  
+               { 
+window.open("z3_ostr.html","okienko_z3_ostr","toolbar=no,directories=no,menubar=no,height=200,width=200,top=200,left=200"); 
+               } 
+function WinOpen_z4()  
+               { 
+window.open("z4_ostr.html","okienko_z4_ostr","toolbar=no,directories=no,menubar=no,height=600,width=1000,top=200,left=400"); 
+               }
+function WinOpen_z5()  
+               { 
+window.open("z5_ostr.html","okienko_z5_ostr","toolbar=no,directories=no,menubar=no,height=250,width=1200,top=700,left=100"); 
+               } 
+function okno_zamknij()  
+                       { 
+                             window.close() 
+                       } 
+          </script> 
+      </head> 
+<body> 
+  <h1 style="color: red; size: 2cm;">Szkielet zaliczeniowy JavaScript Julia Ostrowska klasa 3F</h1>
+   <form> 
+        <input type="button_z1" name="zadanie1" value="zadanie1-ostrowska" onclick="WinOpen_z1(' ')"> 
+        <input type="button_z2" name="zadanie2" value="zadanie2-ostrowska" onclick="WinOpen_z2(' ')"> 
+        <input type="button_z3" name="zadanie3" value="zadanie3-ostrowska" onclick="WinOpen_z3(' ')"> 
+        <input type="button_z4" name="zadanie4" value="zadanie4-ostrowska" onclick="WinOpen_z4(' ')"> 
+        <input type="button_z5" name="zadanie5" value="zadanie5-ostrowska" onclick="WinOpen_z5(' ')"> 
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/> 
+    </form> 
+</body> 
+</html> 
