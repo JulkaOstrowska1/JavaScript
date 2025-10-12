@@ -1,6 +1,12 @@
      <html> 
          <body> 
           <div style="color:green;font-size:50px;"> 
+                	<script>
+			function okno_zamknij_ostrowska()
+   			 {
+   			 window.close()
+   			 }
+    </script>
             <script language="JavaScript"> 
               var m_ost=prompt("m=","");
               var a=parseFloat(D1_ost); 
@@ -8,13 +14,8 @@
               b = (a+*(a+1));
               document.write("m= " +a+ "<br>");
 	          document.write("1/" +a+ "=" + "1/" +(a+1)+ "+" + "1/" +b);
-
-                function okno_zamknij_ostr() 
-                 { 
-                   window.close() 
-                 } 
               </script> 
             </div> 
-          <input type="button" value="zamknij okno" onclick="okno_zamknij_ostr()"/> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska()"/> 
         </body> 
        </html>
