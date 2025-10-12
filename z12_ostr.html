@@ -6,11 +6,11 @@
         var G1_ost=prompt("Godzina1(G1)=",""); 
         var D2_ost=prompt("Dzień2(D2)=",""); 
         var G2_ost=prompt("Godzina2(G2)=",""); 
-        var d1=parseFloat(D1_ost); 
-        var g1=parseFloat(G1_ost); 
-        var d2=parseFloat(D2_ost); 
-        var g2=parseFloat(G2_ost); 
-        var sekundy=((d1*24+g1)-(d2*24+g2))*60*60; 
+        var a=parseFloat(D1_ost); 
+        var b=parseFloat(G1_ost); 
+        var c=parseFloat(D2_ost); 
+        var d=parseFloat(G2_ost); 
+        var sekundy=((a*24+b)-(c*24+d))*60*60; 
         document.write("Ilość sekund = "+sekundy+" sekund<br>"); 
         function okno_zamknij_ost() { 
           window.close(); 
