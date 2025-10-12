@@ -1,30 +1,33 @@
 <html>
 <head>
-<meta charset="UTF-8">
-<style>
-<div style="color:navy;font-size:50px;">
-	<script>
-	function okno_zamknij_ostrowska()
-    {
-    window.close()
-    }
-	</script>
-	<script>
-	  var m_ost=prompt("Podaj liczbę A= ");
-    var m2_ost=prompt("Podaj liczbę B= ");
-    var A = parseFloat(m_ost);
-    var B = parseFloat(m2_ost);
-    var z=(A**3);
-    var x=(3*((A**2)*B));
-    var c=(3*(A*(B**2)));
-    var v=(B**3)
-    var q=(z+x+c+v);
-    document.write("Wczytane Liczby:" ,  "A =  " +A+ "    " , "B =  " +B+ "<br>");
-    document.write( "("+A+" + "+B+")^3 = "+A+"^3 "+ " + "+ " 3* "+ " (("+A+")^2) * ("+B+") "+ " + "+ " 3 * ("+A+") * (("+B+")^2) "+ " + "+ " "+B+"^3 = "+(A**3)+" + "+(3*((A**2)*B))+" + "+(3 * (A) * (B**2))+" + "+(B**3)+" = "+((A + B) * (A + B) * (A + B))+ "<br>"  );
-	</script>
+  <meta charset="UTF-8">
+  <style>
+    div {color: navy;font-size: 50px;}
+  </style>
 </head>
 <body>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska()"/>
-</div>
+  <div>
+    <script>
+      function okno_zamknij_ostrowska() 
+	  {
+        window.close();
+      }
+      var m_ost = prompt("Podaj liczbę A= ");
+      var m2_ost = prompt("Podaj liczbę B= ");
+      var A = parseFloat(m_ost);
+      var B = parseFloat(m2_ost);
+      var A3 = A ** 3;
+      var A2B = 3 * (A ** 2) * B;
+      var AB2 = 3 * A * (B ** 2);
+      var B3 = B ** 3;
+      var wynik = A3 + A2B + AB2 + B3;
+
+      document.write("Wczytane liczby: A = " + A + "    B = " + B + "<br>");
+      document.write("(" + A + " + " + B + ")^3 = " + A + "^3 + 3 * (" + A + "^2) * (" + B + ") + 3 * (" + A + ") * (" + B + "^2) + " + B + "^3 = " + A3 + " + " + A2B + " + " + AB2 + " + " + B3 + " = " + wynik + "<br>");
+    </script>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska()"/>
+  </div>
 </body>
 </html>
+
