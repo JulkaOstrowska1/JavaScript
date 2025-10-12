@@ -2,11 +2,12 @@
          <body> 
           <div style="color:green;font-size:50px;"> 
             <script language="JavaScript"> 
-              var D1_ost=prompt("liczba=",""); 
-              var wzor; 
-              var m=parseFloat(D1_ost); 
-              wzor=1/(m+1)+1/[m*(m+1)]; 
-              document.write("1/"+m+"="+wzor); 
+              var m_ost=prompt("m=","");
+              var a=parseFloat(D1_ost); 
+              var b; 
+              b = a+2;
+              document.write("m= " +a+ "<br>");
+	         document.write("1/" +a+ "=" + "1/" +b+ "+" + "1/" +(a+2)*7+ "+" + "1/" +(b*5)+ "<br>");
                 function okno_zamknij_ostr() 
                  { 
                    window.close() 
