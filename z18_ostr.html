@@ -6,24 +6,32 @@
 <body> 
 <div style="color:navy;font-size:50px;"> 
 <script language="JavaScript"> 
-var a_ost=parseFloat(prompt("a=","")); 
-var b_ost=parseFloat(prompt("b=","")); 
-function suma_ost(a_ost, b_ost) { 
-return a_ost + b_ost; 
+var a=parseFloat(prompt("a=","")); 
+var b=parseFloat(prompt("b=","")); 
+function suma_ost(a, b) { 
+return a + b; 
 } 
-function mnozenie_ost(a_ost, b_ost) { 
-return a_ost * b_ost; 
-} 
-function kwadrat_ost(a_ost, b_ost) { 
-return a_ost * a_ost, b_ost * b_ost; 
-} 
-function roznica_ost(a_ost, b_ost) { 
-return a_ost - b_ost; 
-} 
-function reszta_ost(a_ost, b_ost) { 
-return a_ost % b_ost; 
+function roznica_ost(a, b) {
+return a - b;
+}
+function mnozenie_ost(a, b) {
+return a * b;
+}
+function kwadrat_ost(a, b) {
+return a * a;
+}
+function kwadrat2_ost(a, b) {
+return b * b;
+}
+function reszta_ost(a, b) {
+return a % b;
 }
 document.write("suma="+suma_ost(a,b)+"<br>"); 
+document.write("roznica="+roznica_ost(a,b)+"<br>"); 
+document.write("mnożenie="+mnozenie_ost(a,b)+"<br>"); 
+document.write("kwadrat a="+kwadrat_ost(a,b)+"<br>"); 
+document.write("kwadrat b="+kwadrat2_ost(a,b)+"<br>"); 
+document.write("reszta="+reszta_ost(a,b)+"<br>"); 
 </script> 
 </div> 
 </body> 
