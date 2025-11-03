@@ -1,0 +1,49 @@
+<html>  
+<head>  
+<title> 
+Przykład obliczenia Pola  i  Obwodu
+</title> 
+<script language="JavaScript"> 
+function Pole(a,b) 
+{ 
+a_dana_ostr=parseFloat(r) 
+b_dana_ostr=parseFloat(h) 
+Pole_ostr=a_dana_ostr*b_dana_ostr
+document.getElementsByName('obj')[0].value=Pole_ostr.toFixed(2);   /* na dokument  */ 
+alert("Pole="+Pole_ostr.toFixed(2)+" cm^2");    /*do okna Alert */                                               
+pokaz1.innerHTML="Pole="+Pole_ostr.toFixed(2)+" cm^2"+"<br>";       /* do tabeli */ 
+ } 
+function Obwod(a,b) 
+{ 
+    a_dana_ostr=parseFloat(r) 
+    b_dana_ostr=parseFloat(h) 
+   Obwod_ostr=2*a_dana_ostr+2*b_dana_ostr
+   document.getElementsByName('pole')[0].value=Obwod_ostr.toFixed(2); 
+   alert("Obwod="+Obwod_ostr.toFixed(2)+" cm"); 
+   pokaz2.innerHTML="Obwod="+Obwod_ostr.toFixed(2)+"cm"; 
+} 
+       </script> 
+</head>  
+<body>  
+ Pobliczanie V   i    Pc walca 
+<br> <br> 
+<form name="formularz" action="..." onsubmit="Pole(this.promien.value,this.wysokosc.value); 
+Obwod(this.promien.value,this.wysokosc.value);return false">   
+     Podaj a= 
+        <input  size="6"  name="promien"> 
+     Podaj b= 
+        <input  size="6"  name="wysokosc"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       Pole= 
+           <input  size="6"  name="obj"> 
+       Obwod= 
+          <input  size="6"  name="pole"> 
+</form> 
+<table> 
+              <tr id="pokaz1"></tr> 
+              <tr id="pokaz2"></tr> 
+</table> 
+</body>  
+</html> 
