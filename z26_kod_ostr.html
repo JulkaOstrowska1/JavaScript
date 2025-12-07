@@ -1,0 +1,72 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<html>
+<head>
+<title>Zadanie 26</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function pole_ostrowska(a_ostr,b_ostr,h_ostr)
+{
+ a_ostr=parseFloat(a_ostr);
+ b_ostr=parseFloat(b_ostr);
+ h_ostr=parseFloat(h_ostr);
+ pole_wynik_ostr=(a_ostr+b_ostr)*h_ostr/2;
+ document.getElementsByName('pole')[0].value=pole_wynik_ostr.toFixed(2);
+ alert("Pc="+pole_wynik_ostr.toFixed(2)+" cm^2");
+ wprowadz_pole_ostr.innerHTML="Pc="+pole_wynik_ostr.toFixed(2)+" cm^2"+"<br>";
+}
+function obwod_ostr(a_ostr,b_ostr,h_ostr)
+{
+ a_ostr=parseFloat(a_ostr);
+ b_ostr=parseFloat(b_ostr);
+ h_ostr=parseFloat(h_ostr);
+ x_ostr=Math.abs(a_ostr-b_ostr)/2;
+ c_ostr=Math.sqrt(x_ostr*x_ostr+h_ostr*h_ostr);
+ d_ostr=c_ostr;
+ obwod_ostr=a_ostr+b_ostr+c_ostr+d_ostr;
+ document.getElementsByName('obw')[0].value=obwod_ostr.toFixed(2);
+ alert("Obwód="+obwod_ostr.toFixed(2)+" cm");
+ wprowadz_obw_ostr.innerHTML="Obwód="+obwod_ostr.toFixed(2)+" cm";
+}
+function okno_zamknij_ostrowska_kod()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie pola oraz obwodu trapezu równoramiennego
+<br>
+<br>
+<form name="formularz" action="..."
+onsubmit="pole_ostrowska(this.a_dana_ostr.value,this.b_dana_ostr.value,this.h_dana_ostr.value);
+obwod_ostr(this.a_dana_ostr.value,this.b_dana_ostr.value,this.h_dana_ostr.value);return false">
+Podaj a=
+<input size="6" name="a_dana_ostr">
+Podaj b=
+<input size="6" name="b_dana_ostr">
+Podaj h=
+<input size="6" name="h_dana_ostr">
+<br>
+<br>
+<input type="submit" Value="oblicz" >
+<br>
+<br>
+Pole=
+<input size="6" name="pole">
+Obwód=
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="wprowadz_pole_ostr"></tr>
+<tr id="wprowadz_obw_ostr"></tr>
+<br>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska_kod()"/>
+</table>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
