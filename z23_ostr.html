@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Zadanie 21</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function dlugosc_ostr(d_ostr,x_ostr)
+{
+ d_ostr=parseFloat(d_ostr);
+ x_ostr=parseFloat(x_ostr);
+ drabina_ostr=Math.sqrt(d_ostr*d_ostr+x_ostr*x_ostr);
+ document.getElementsByName('drab')[0].value=drabina_ostr.toFixed(2);
+ alert("Drabina="+drabina_ostr.toFixed(2)+" m");
+ drabina.innerHTML="Drabina="+drabina_ostr.toFixed(2)+" m"+"<br>";
+}
+function alfa_ostr(d_ostr,x_ostr)
+{
+ d_ostr=parseFloat(d_ostr);
+ x_ostr=parseFloat(x_ostr);
+ radian_ostr=Math.atan2(d_ostr,x_ostr);
+ stopnie_ostr=radian_ostr*(180/Math.PI);
+ document.getElementsByName('kat')[0].value=stopnie_ostr.toFixed(2);
+ alert("Alfa="+stopnie_ostr.toFixed(2)+" stopni");
+ alfa.innerHTML="Alfa="+stopnie_ostr.toFixed(2)+" stopni";
+}
+function okno_zamknij_ostrowska_kod()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie drabiny
+<br>
+<br>
+<form name="formularz" action="..." onsubmit="dlugosc_ostr(this.d_dana_ostr.value,this.x_dana_ostr.value);
+alfa_ostr(this.d_dana_ostr.value,this.x_dana_ostr.value);return false">
+Podaj d=
+<input size="6" name="d_dana_ostr">
+Podaj x=
+<input size="6" name="x_dana_ostr">
+<br>
+<br>
+<input type="submit" Value="oblicz" >
+<br>
+<br>
+Drabina=
+<input size="6" name="drab">
+Alfa=
+<input size="6" name="kat">
+</form>
+<table>
+<tr id="drabina"></tr>
+<tr id="alfa"></tr>
+<br/>
+<br/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska_kod()"/>
+</table>
+</body>
+</html>
