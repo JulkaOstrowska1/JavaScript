@@ -1,0 +1,64 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<html> 
+<head>
+<title>Zadanie 27</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function dlugosc(a_ostr, c_ostr)
+{
+ a_ostr = parseFloat(a_ostr);
+ c_ostr = parseFloat(c_ostr);
+ b_ostr = Math.sqrt(c_ostr * c_ostr - a_ostr * a_ostr);
+ h_ostr = b_ostr;
+ document.getElementsByName('wys')[0].value = h_ostr.toFixed(2);
+ alert("Wysokość (h)=" + h_ostr.toFixed(2) + " m");
+ wysokosc.innerHTML = "Wysokość (h)=" + h_ostr.toFixed(2) + " m<br>";
+}
+function obwod_ostr(a_ostr, c_ostr)
+{
+ a_ostr = parseFloat(a_ostr);
+ c_ostr = parseFloat(c_ostr);
+ b_ostr = Math.sqrt(c_ostr * c_ostr - a_ostr * a_ostr);
+ radian_ostr = Math.atan2(a_ostr, b_ostr);
+ stopnie_ostr = radian_ostr * (180 / Math.PI);
+ document.getElementsByName('kat')[0].value = stopnie_ostr.toFixed(2);
+ alert("Kąt=" + stopnie_ostr.toFixed(2) + " stopni");
+ kat_stopnie.innerHTML = "Alfa=" + stopnie_ostr.toFixed(2) + " stopni";
+}
+function okno_zamknij_ostrowska_kod()
+{
+ window.close()
+}
+</script>
+</head>
+<body>
+Wysokość i kąt startu samolotu
+<br><br>
+<form name="formularz" action="..."
+ onsubmit="dlugosc(this.odl_dana_ostr.value, this.s_dana_ostr.value);
+ obwod_ostr(this.odl_dana_ostr.value, this.s_dana_ostr.value); return false">
+Podaj odległość=
+<input size="6" name="odl_dana_ostr">
+Podaj ile przeleciał samolot=
+<input size="6" name="s_dana_ostr">
+<br><br>
+<input type="submit" value="oblicz">
+<br><br>
+Wysokość (h)=
+<input size="6" name="wys">
+Kąt=
+<input size="6" name="kat">
+</form>
+<table>
+<tr id="wysokosc"></tr>
+<tr id="kat_stopnie"></tr>
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska_kod()"/>
+</table>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
