@@ -1,0 +1,63 @@
+<html> 
+   <body> 
+<html>
+<head>
+<title>Zadanie 22</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function pole_ostrowska(a_ostr,b_ostr)
+{
+ a_ostr=parseFloat(a_ostr);
+ b_ostr=parseFloat(b_ostr);
+ pole_wynik_ostr=a_ostr*b_ostr;
+ document.getElementsByName('pole')[0].value=pole_wynik_ostr.toFixed(2);
+ alert("Pc="+pole_wynik_ostr.toFixed(2)+" cm^2");
+ wprowadz_pole_ostr.innerHTML="Pc="+pole_wynik_ostr.toFixed(2)+" cm^2"+"<br>";
+}
+function obwod_ostrowska(a_ostr,b_ostr)
+{
+ a_ostr=parseFloat(a_ostr);
+ b_ostr=parseFloat(b_ostr);
+ obwod_ostr=2*a_ostr+2*b_ostr;
+ document.getElementsByName('obw')[0].value=obwod_ostr.toFixed(2);
+ alert("Obwod="+obwod_ostr.toFixed(2)+" cm");
+ wprowadz_obw_ostr.innerHTML="Obwód="+obwod_ostr.toFixed(2)+" cm";
+}
+function okno_zamknij_ostrowska_kod()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie pola oraz obwodu prostokąta
+<br>
+<br>
+<form name="formularz" action="..." onsubmit="pole_ostrowska(this.a_dana_ostr.value,this.b_dana_ostr.value);
+obwod_ostrowska(this.a_dana_ostr.value,this.b_dana_ostr.value);return false">
+Podaj a=
+<input size="6" name="a_dana_ostr">
+Podaj b=
+<input size="6" name="b_dana_ostr">
+<br>
+<br>
+<input type="submit" Value="oblicz" >
+<br>
+<br>
+Pole=
+<input size="6" name="pole">
+Obwód=
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="wprowadz_pole_ostr"></tr>
+<tr id="wprowadz_obw_ostr"></tr>
+<br/>
+<br/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ostrowska_kod()"/>
+</table>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
