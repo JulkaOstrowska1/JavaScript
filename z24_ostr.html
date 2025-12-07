@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>zadanie 24</h1>
+<script type="text/javascript">
+function wczytaj_ostrowska() {
+    var x1_ostr = parseFloat(document.getElementById('x1_dana_ostr').value);
+    var x2_ostr = parseFloat(document.getElementById('x2_dana_ostr').value);
+    return {x1_ostr, x2_ostr};
+}
+function radiany_ostrowska(x1_ostr) {
+    return x1_ostr * Math.PI / 180;
+}
+function y1_ostrowska(x1_ostr) {
+    return 3 * Math.pow(x1_ostr, 3/4);
+}
+function y2_ostrowska(x1_rad_ostr) {
+    return 2 * Math.cos(x1_rad_ostr) + 3 * Math.sin(x1_rad_ostr);
+}
+function y3_ostrowska(x1_ostr, x2_ostr) {
+    return Math.cbrt(Math.pow(x1_ostr,5) + 2 * Math.pow(x2_ostr,4) * Math.abs(x1_ostr - x2_ostr));
+}
+function oblicz_ostrowska() {
+    var dane = wczytaj_ostr();
+    var x1 = dane.x1_ostr;
+    var x2 = dane.x2_ostr;
+    var x1_rad = radiany_ostr(x1);
+    var y1 = y1_ostr(x1);
+    var y2 = y2_ostr(x1_rad);
+    var y3 = y3_ostr(x1, x2);
+
+    document.getElementById('x1_wynik_ostr').value = x1;
+    document.getElementById('x1_rad_wynik_ostr').value = x1_rad.toFixed(2);
+    document.getElementById('y1_wynik_ostr').value = y1.toFixed(2);
+    document.getElementById('y2_wynik_ostr').value = y2.toFixed(2);
+    document.getElementById('y3_wynik_ostr').value = y3.toFixed(2);
+}
+</script>
+<p>Wprowadź dane:</p>
+X1: <input type="text" id="x1_dana_ostr" size="5"><br><br>
+X2: <input type="text" id="x2_dana_ostr" size="5"><br><br>
+<input type="button" value="Oblicz" onclick="oblicz_ostr()"><br><br>
+X1: <input type="text" id="x1_wynik_ostr" size="10"><br><br>
+X1 w radianach: <input type="text" id="x1_rad_wynik_ostr" size="10"><br><br>
+y1: <input type="text" id="y1_wynik_ostr" size="10"><br><br>
+y2: <input type="text" id="y2_wynik_ostr" size="10"><br><br>
+y3: <input type="text" id="y3_wynik_ostr" size="10"><br><br>
+</body>
+</html>
