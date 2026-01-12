@@ -1,23 +1,28 @@
 <html> 
      <head> 
            <script type="text/javascript"> 
-              function klient(nazwisko_o,imie_o,zawod_o)//początek konstruktora 
+              function klient(nazwisko_o,imie_o,zawod_o,wiek_o)//początek konstruktora 
   { 
    this.nazwisko=nazwisko_o; 
    this.imie=imie_o; 
-   this.zawod=zawod_o;   
+   this.zawod=zawod_o;
+   this.wiek=wiek_o
   }//koniec konstruktora 
               klient.prototype.wypisz = function () //definicja metody 
       { 
-         alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod); 
+         alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod + ' ' + this.wiek); 
       }; 
   var osoba1 = new klient("Ostrowska", "Julia", "studentka"); // nowy obiekt osoba1 
-  var osoba2 = new klient('Gadomska', 'Lena', 'drzewo'); 
+  var osoba2 = new klient'Gadomska', 'Lena', 'drzewo'); 
   osoba1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1 
   osoba2.wypisz(); 
                 document.write("dostęp do właściwości"+"<br>"); 
-// poniżej dostęp do pól osoby1 
-     document.write("klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod); 
+// poniżej dostęp do pól osoby1 i 2
+     document.write("klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod+"   "+this.wiek); 
+     document.write("klient drugi"+"   "+osoba2.nazwisko+"   "+osoba2.imie+"   "+osoba2.zawod+"   "+this.wiek); 
+                }
+                 osoba1.pokaz(); 
+                 osoba2.pokaz();
             </script> 
      </head> 
 <body> 
