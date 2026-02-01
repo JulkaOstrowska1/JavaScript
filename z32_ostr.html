@@ -14,16 +14,16 @@
       }; 
   var osoba1 = new klient("Ostrowska", "Julia", "studentka", "17"); // nowy obiekt osoba1 
   var osoba2 = new klient'Gadomska', 'Lena', 'drzewo', '16'); 
-document.write("<b>Wyświetlanie danych metodą wypisz():</b><br>");
+document.write("<b>Wyświetlanie danych metodą wypisz():</b><br>");<br>
                 
-  osoba1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1 
-  osoba2.wypisz(); 
+  osoba1.wypisz(); <br>// uruchomienie metody wypisz() dotyczącej osoby 1 <br>
+  osoba2.wypisz(); <br> <br>
                 
-document.write("dostęp do właściwości"+"<br>"); 
+document.write("dostęp do właściwości"+"<br>"); <br>
                 
 // poniżej dostęp do pól osoby1 i 2
-     document.write("klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod+"   "+osoba1.wiek); 
-     document.write("klient drugi"+"   "+osoba2.nazwisko+"   "+osoba2.imie+"   "+osoba2.zawod+"   "+osoba2.wiek); 
+     document.write("klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod+"   "+osoba1.wiek); <br>
+     document.write("klient drugi"+"   "+osoba2.nazwisko+"   "+osoba2.imie+"   "+osoba2.zawod+"   "+osoba2.wiek); <br>
                 }
             </script> 
      </head> 
@@ -32,41 +32,4 @@ document.write("dostęp do właściwości"+"<br>");
    programowanie obiektowe   
 </body> 
 </html> 
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Programowanie obiektowe JS</title>
-
-<script type="text/javascript">
-function Klient(nazwisko_o, imie_o, zawod_o, wiek_o)
-{
-    this.nazwisko = nazwisko_o; 
-    this.imie = imie_o; 
-    this.zawod = zawod_o;  
-    this.wiek = wiek_o
-}
-
-Klient.prototype.wypisz = function()
-{
-    document.write(this.nazwisko + " " + this.imie + ", zawód: " + this.zawod + " wiek: " + this.wiek + "<br>");
-};
-var osoba1 = new Klient("Ostrowska", "Julia", "Studentka", "17");
-var osoba2 = new Klient("Gadomska", "Lena", "Drzewo", "16");
-     
-document.write("<b>Wyświetlanie danych metodą wypisz():</b><br>");
-osoba1.wypisz();
-osoba2.wypisz();
-
-document.write("<b>Dostęp do własności:</b><br>");
-document.write("klient pierwszy " + osoba1.nazwisko + " " + osoba1.imie + " " + osoba1.zawod + "<br>");
-document.write("klient drugi " + osoba2.nazwisko + " " + osoba2.imie + " " + osoba2.zawod + "<br>");
-
-</script>
-</head>
-<body>
-<br>
-</body>
-</html>
  
