@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Ostrowska Z40_JS</title>
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+<script>
+var x = prompt("podaj argument x=","");
+var x_ostr = parseFloat(x);
+document.write("czytany argument x = " + x_ostr + "<br>");
+function f_ostr(x_ostr)
+{
+if(x_ostr >= 1)
+{
+return 1;
+}
+if(x_ostr >= -2 && x_ostr < 1)
+{
+return x_ostr * x_ostr;
+}
+if(x_ostr < -2)
+{
+return 4;
+}
+}
+document.write("f(x) = " + f_ostr(x_ostr).toFixed(2) + "<br>");
+</script>
+
+</div>
+</body>
+</html>
+
+<!-- Ostrowska Z40_JS -->
