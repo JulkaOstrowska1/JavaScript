@@ -1,14 +1,22 @@
-<html>
- <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Ostrowska Z45</title>
+</head>
 <body>
-<div style="color:red;font-size:50px;">
-<script language="JavaScript">
-for(i_o++)
+<div style="color:green;font-size:40px;">
+<script>
+var koniec_petli_ost;
+koniec_petli_ost = parseInt(prompt("Podaj liczbę końcową",""));
+document.write("Liczby parzyste od 2 do "+koniec_petli_ost+"<br><br>");
+for(var i_ost=2; i_ost<=koniec_petli_ost; i_ost=i_ost+2)
 {
-var i_o=prompt("liczba1=","")
-document.write("wyświetlam liczby parzyste "+"<br>");
+document.write(i_ost+"<br>");
 }
 </script>
 </div>
 </body>
 </html>
+
+<!-- Ostrowska Z45_JS -->
