@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Ostrowska Z57</title>
+</head>
+<body>
+<script>
+var liczba_ost=parseInt(prompt("Podaj liczbę z przedziału <20,60>"));
+if(liczba_ost<20 || liczba_ost>60)
+{
+document.write("Liczba nie należy do przedziału <20,60>");
+}
+else
+{
+var tekst1_ost="Julia";
+var tekst2_ost="OST";
+var tekst3_ost="Ostrowska";
+if(liczba_ost<40)
+{
+for(var i_ost=liczba_ost;i_ost<=60;i_ost++)
+{
+document.write("<p style='font-size:"+i_ost+"px;'>"+tekst1_ost+"</p>");
+}
+}
+else if(liczba_ost==40)
+{
+document.write("<p style='font-size:40px;'>"+tekst2_ost+"</p>");
+}
+else
+{
+for(var i_ost=liczba_ost;i_ost>=20;i_ost--)
+{
+document.write("<p style='font-size:"+i_ost+"px;'>"+tekst3_ost+"</p>");
+}
+}
+}
+</script>
+</body>
+</html>
+
+<!-- Ostrowska Z57_JS -->
